@@ -1,6 +1,7 @@
 #Maven
 ##Ch01
-###CommandLineMakeMaven
+###Test
+####CommandLineMakeMaven
 쉘 스크립트(run.sh)를 제작한 후 chmod 777을 해줘야 실행  
 ***쉘 스크립트 및 cmd 스크립트 강의도 올려야 할듯, md 문법 포함***  
 md 문법에서 굵게는 에스터리스크 두개를 양쪽으로 감싼다.  
