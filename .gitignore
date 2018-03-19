@@ -2,4 +2,11 @@
 *.iml
 .idea
 
+# macOS
 .DS_store
+
+# maven
+target
+
+# ant
+build
