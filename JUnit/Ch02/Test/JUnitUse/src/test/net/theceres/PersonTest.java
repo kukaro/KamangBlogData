@@ -10,11 +10,13 @@ class PersonTest {
     @DisplayName("Person's nameDecorate method's test")
     void nameDecorate() {
         Person p = new Person("kukaro", 26);
-        assertEquals("kukarogood", p.nameDecorate("good"),"success");
+        assertEquals("kukarogood", p.nameDecorate("good"),"fail");
     }
 
     @Test
     void isMatchAge() {
+        Person p = new Person("kukaro", 26);
+        assertNotNull(p,"is null");
     }
 
 }
