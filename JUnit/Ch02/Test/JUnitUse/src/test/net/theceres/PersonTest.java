@@ -1,22 +1,20 @@
 package net.theceres;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class PersonTest {
+public class PersonTest {
     @Test
-    @DisplayName("Person's nameDecorate method's test")
-    void nameDecorate() {
+    public void nameDecorate() {
         Person p = new Person("kukaro", 26);
-        assertEquals("kukarogood", p.nameDecorate("good"), "fail");
+        assertEquals("fail","kukarogood", p.nameDecorate("good"));
     }
 
     @Test
-    void isMatchAge() {
+    public void isMatchAge() {
         Person p = new Person("kukaro", 26);
-        assertNotNull(p, "is null");
+        assertNotNull("fail",p);
     }
 
 }
