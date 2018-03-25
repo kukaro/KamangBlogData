@@ -8,7 +8,7 @@
 # maven
 target
 
-# ant
+# ant,cmake
 build
 
 # java
