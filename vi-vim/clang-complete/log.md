@@ -20,19 +20,10 @@ call vundle#end()
 ```
 내가 실제로 타이핑한 코드는 아래와 같다.  
 ```
-set nocompatible
-filetype off                      
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'file:///home/gmarik/path/to/plugin'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-call vundle#end()             
-filetype plugin indent on
-~                          
+call vundle#end()
 ```
 이제 명령모드에서 :PluginInstall을 타이핑 해보자.  
 http://vlee.kr/1211  
