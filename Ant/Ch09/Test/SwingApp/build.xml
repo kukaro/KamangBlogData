@@ -33,7 +33,7 @@
                 </patternset>
             </fileset>
             <manifest>
-                <attribute name="Main-Class" value="net.theceres.anttest.Main"></attribute>
+                <attribute name="Main-Class" value="net.theceres.main.Main"></attribute>
             </manifest>
         </jar>
     </target>
