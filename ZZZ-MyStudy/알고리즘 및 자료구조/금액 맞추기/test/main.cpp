@@ -18,11 +18,11 @@ int f(int m, int n) {
       return 0;
     }
   }
-	if(memo[m][n]>0){
-		return memo[m][n];
-	}
+  if (memo[m][n] > 0) {
+    return memo[m][n];
+  }
   for (int i = 0; i <= iter; i++) {
-    result += memo[m - bigCache * i][ n - 1] = f(m - bigCache * i, n - 1);
+    result += memo[m - bigCache * i][n - 1] = f(m - bigCache * i, n - 1);
   }
   return result;
 }
@@ -39,7 +39,7 @@ int main() {
   }
   cout << "input money : ";
   cin >> money;
-  memo.resize(money + 1, vector<int>(money+1,0));
-  cout << f(money, cacheCount)<<endl;
+  memo.resize(money + 1, vector<int>(money + 1, 0));
+  cout << f(money, cacheCount) << endl;
   return 0;
 }
