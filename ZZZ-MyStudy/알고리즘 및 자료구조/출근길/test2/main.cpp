@@ -44,6 +44,6 @@ int main() {
       cin >> G[i][j];
     }
   }
-  cout << buff[N][M];
+  cout << buff[N][M]<<endl;
   return 0;
 }
