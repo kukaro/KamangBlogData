@@ -9,6 +9,7 @@
     <property name="build.dir" value="build"></property>
     <property name="classes.dir" value="${build.dir}/classes"></property>
     <property name="jar.dir" value="${build.dir}/jar"></property>
+    <property name="res.dir" value="resource"></property>
 
 
     <target name="clean">
@@ -27,9 +28,9 @@
 
     <target name="jar" depends="compile">
         <jar destfile="${jar.dir}/${name}-${project.version}.jar" basedir="${classes.dir}">
-            <fileset dir="${src.dir}">
+            <fileset dir="${basedir}">
                 <patternset>
-                    <exclude name="**/*.java"></exclude>
+                    <include name="${res.dir}/**"></include>
                 </patternset>
             </fileset>
             <manifest>

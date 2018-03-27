@@ -1,6 +1,6 @@
 package net.theceres.gui;
 
-import resource.text.ResTxt;
+import net.theceres.main.ResTxt;
 
 import javax.swing.*;
 import java.awt.*;
