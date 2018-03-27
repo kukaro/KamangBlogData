@@ -1,1 +1,15 @@
 Shutter를 사용해서 리눅스에서 스크린샷을 쉽게 캡쳐해 보자.
+http://edoli.tistory.com/101
+위의 페이지를 참고함
+sudo apt-get install shutter
+위의 명령어를 입력
+shutter
+위의 명령어를 입력
+
+shutter -f : 전체화면 캡쳐
+shutter -s : 선택화면 캡쳐 (화면의 일부분 캡쳐)
+shutter -w : 창을 하나 선택해서 캡쳐
+shutter  -a : 현재창 캡쳐
+shutter --section : section 캡쳐
+shutter -m : 메뉴 캡쳐
+shutter -t : 툴팁 캡쳐
