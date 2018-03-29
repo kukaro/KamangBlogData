@@ -1,5 +1,8 @@
 test파일
 
+mongodb의 개념
+db>collection>document
+
 mongodb명령어
 db - 현재 사용중인 db확인
 show dbs - db목록 확인
