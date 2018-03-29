@@ -1,1 +1,22 @@
 test파일
+
+mongodb명령어
+db - 현재 사용중인 db확인
+show dbs - db목록 확인
+use <db명> - db사용하는데 없으면 새로 생성
+db.dropDatabase() - 현재 사용중인 db 삭제
+
+show collections - collection목록 확인
+db.createCollection('<컬렉션>') - collection만들기
+
+db.<컬렉션명>.insert(<json타입>) - 테이블에 값 넣기(RDBMS:insert)
+ex) 이름:박유진,나이:30,성별:여성
+{'name':'박유진','age':30,'gender':'female'}
+ex) 이름:조정범,성별:남성
+
+db.<컬렉션명>.find() - 전체값보기(RDBMS:select)
+db.<컬렉션명>.find(<json타입>) - 조건에 맞는 값 보기(RDBMS:select)
+
+db.<컬렉션명>.remove(<json타입>) - 조건에 맞는 값 지우기(RDBMS:select)
+
+db.<컬렉션명>.update(<json타입1>,<json타입2>) - 조건에 맞는 컬럼을 다음 컬럼으로 바꿔라(RDBMS:update)
