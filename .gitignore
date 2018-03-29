@@ -2,6 +2,9 @@
 *.iml
 .idea
 
+# intelliJ
+out
+
 # macOS
 .DS_store
 
@@ -10,6 +13,7 @@ target
 
 # ant,cmake
 build
+cmake-build-debug
 
 # java
 *.class
