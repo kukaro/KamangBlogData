@@ -13,11 +13,11 @@ int f(int n, int p) {
   if (n == 1) {
     return 1;
   }
-  if (memo[n - 1][ p - 1] == 0) {
-    memo[n - 1][ p - 1] = f(n - 1, p - 1);
+  if (memo[n - 1][p - 1] == 0) {
+    memo[n - 1][p - 1] = f(n - 1, p - 1);
   }
-  if (memo[n - 1][ p + 1] == 0) {
-    memo[n - 1][ p + 1] = f(n - 1, p + 1);
+  if (memo[n - 1][p + 1] == 0) {
+    memo[n - 1][p + 1] = f(n - 1, p + 1);
   }
   return memo[n - 1][p - 1] + memo[n - 1][p + 1] % 1000000000;
 }
@@ -26,7 +26,7 @@ int main() {
   int result = 0;
   cin >> N;
   for (int i = 1; i < 10; i++) {
-    result += f(N, i);
+    result += f(N, i) % 1000000000;
   }
   cout << result << endl;
   return 0;
