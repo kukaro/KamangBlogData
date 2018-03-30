@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 
+int T;
 int N, M;
 vector<string> arr1;
 vector<string> arr2;
