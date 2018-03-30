@@ -19,7 +19,7 @@ int f(int n, int p) {
   if (memo[n - 1][p + 1] == 0) {
     memo[n - 1][p + 1] = f(n - 1, p + 1);
   }
-  return memo[n - 1][p - 1] + memo[n - 1][p + 1] % 1000000000;
+  return (memo[n - 1][p - 1] + memo[n - 1][p + 1]) % 1000000000;
 }
 
 int main() {
