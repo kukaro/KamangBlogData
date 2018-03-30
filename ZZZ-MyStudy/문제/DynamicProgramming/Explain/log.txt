@@ -1,0 +1,2 @@
+여기서 DynamicProgramming은 Memoization을 포함한다.
+그 이유는 바텀업과 탑다운 방식의 차이일뿐 두 방식을 모두 사용할 수 있기 때문이다.
