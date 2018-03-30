@@ -34,7 +34,6 @@ int main(){
 		if(i==N || j==M){
 			break;
 		}	
-		cout<<arr1[i]<<":"<<arr2[j]<<endl;
 		if(arr1[i].compare(arr2[j])<0){
 			i++;
 		}else if(arr1[i].compare(arr2[j])>0){
@@ -43,6 +42,10 @@ int main(){
 			ans.push_back(arr2[j]);
 			i++;
 		}
+	}
+	cout<<ans.size()<<endl;
+	for(string atom:ans){
+		cout<<atom<<endl;
 	}
 	return 0;
 }
