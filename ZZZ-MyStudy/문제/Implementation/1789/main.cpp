@@ -8,7 +8,7 @@ int count;
 int main() {
   ll i = 0;
   cin >> S;
-  while (S > i) {
+  while (S >= i) {
     S -= i;
     i++;
   }
