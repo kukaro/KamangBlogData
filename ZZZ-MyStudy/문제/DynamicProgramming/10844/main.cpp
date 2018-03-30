@@ -26,7 +26,8 @@ int main() {
   int result = 0;
   cin >> N;
   for (int i = 1; i < 10; i++) {
-    result += f(N, i) % 1000000000;
+    result += f(N, i);
+    result %= 1000000000;
   }
   cout << result % 1000000000 << endl;
   return 0;
