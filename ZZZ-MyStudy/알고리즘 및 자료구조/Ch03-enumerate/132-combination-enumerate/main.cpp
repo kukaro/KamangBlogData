@@ -1,28 +1,32 @@
 #include <iostream>
+#include <vector>
 #define MAXN 1000
 using namespace std;
 
-void print_arr(int set[], int set_size) {
-	for (int i = 0; i < set_size; i++) {
-    cout << set[i] << " ";
-  }
-  cout << endl;
+int N,K;
+
+void printArr(vector<int> arr){
+	for(int atom:arr){
+		cout<<atom<<" ";
+	}
+	cout<<endl;
 }
 
-void subset(int set[], int set_size, int n, int index) {
-  if (index == n) {
-    print_arr(set, set_size);
-    return;
-  }
-  set[set_size] = index;
-  subset(set, set_size + 1, n, index + 1);
-  subset(set, set_size, n, index + 1);
+void comb(vector<int> arr,int k,int index){
+	if(k==0){
+		printArr(arr);
+	}else if(N==index){
+		return;
+	}else{
+		comb(arr,k,index+1);
+		arr.push_back(index);
+		comb(arr,k-1,index+1);
+	}
 }
 
-int main() {
-  int set[MAXN], n;
-  cout << "input n: ";
-  cin >> n;
-  subset(set, 0, n, 0);
-  return 0;
+int main(){
+	cout<<"input N,K: ";
+	cin>>N>>K;
+	comb(vector<int>(),K,0);
+	return 0;
 }
