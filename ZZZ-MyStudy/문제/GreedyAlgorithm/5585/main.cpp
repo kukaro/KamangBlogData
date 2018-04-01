@@ -15,16 +15,16 @@ void initVec() {
 }
 
 int main() {
-  int count=0;
-	cin >> M;
+  int count = 0;
+  cin >> M;
   M = 1000 - M;
   initVec();
-	for(int i=0;i<arr.size();i++){
-		if(M>arr[i]){
-			count+=M/arr[i];
-			M-=M/arr[i]*arr[i];
-		}
-	}
-	cout<<count<<endl;
+  for (int i = 0; i < arr.size(); i++) {
+    if (M >= arr[i]) {
+      count += M / arr[i];
+      M -= M / arr[i] * arr[i];
+    }
+  }
+  cout << count << endl;
   return 0;
 }
