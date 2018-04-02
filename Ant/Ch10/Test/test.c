@@ -1,14 +1,19 @@
-int num;
+
+
+const int pinLED = 2;
+bool sw = false;
+char tmp = 'A';
+
 void setup() {
   Serial.begin(9600);
+  pinMode(pinLED,OUTPUT);
+
 }
 
 void loop() {
-  Serial.print("this number : ");
-  Serial.println(num++);
-  delay(500);
-  while(Serial.available()){
-    char ch = Serial.read();
-    Serial.println(ch);
+  digitalWrite(pinLED,sw);
+  if(Serial.available()){
+    Serial.read();
+    sw=!sw;
   }
 }
