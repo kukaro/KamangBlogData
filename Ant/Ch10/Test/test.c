@@ -1,8 +1,4 @@
-
-
-const int pinLED = 2;
-bool sw = false;
-char tmp = 'A';
+const int pinLED = 5;
 
 void setup() {
   Serial.begin(9600);
@@ -11,9 +7,12 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(pinLED,sw);
-  if(Serial.available()){
-    Serial.read();
-    sw=!sw;
+  for(int i=0;i<256;i++){
+    analogWrite(pinLED,i);
+    delay(5);
+  }
+  for(int i=255;i>=0;i--){
+    analogWrite(pinLED,i);
+    delay(5);
   }
 }
