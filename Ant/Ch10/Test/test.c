@@ -1,18 +1,15 @@
-const int pinLED = 5;
+const int pinLED = 3;
+const int pinREG = A5;
+
+long val;
 
 void setup() {
-  Serial.begin(9600);
+  pinMode(pinREG,INPUT);
   pinMode(pinLED,OUTPUT);
-
 }
 
 void loop() {
-  for(int i=0;i<256;i++){
-    analogWrite(pinLED,i);
-    delay(5);
-  }
-  for(int i=255;i>=0;i--){
-    analogWrite(pinLED,i);
-    delay(5);
-  }
+  val = analogRead(pinREG);
+  val = val*255/1023;
+  analogWrite(pinLED,val);
 }
