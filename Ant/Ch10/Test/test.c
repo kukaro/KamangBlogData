@@ -5,10 +5,10 @@ void setup() {
 
 void loop() {
   Serial.print("this number : ");
-  Serial.println(++num);
+  Serial.println(num++);
   delay(500);
-  if(Serial.available()){
-    Serial.print("input data :");
-    Serial.println(Serial.available());
+  while(Serial.available()){
+    char ch = Serial.read();
+    Serial.println(ch);
   }
 }
