@@ -1,14 +1,14 @@
+#include<SoftwareSerial.h>
 
-const int pinBTN = 4;
+SoftwareSerial BTSerial(2,3);
 
-int val;
+int count;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(pinBTN,INPUT);
+  BTSerial.begin(9600);
 }
 
 void loop() {
-  val = digitalRead(pinBTN);
-  Serial.println(val);
+  BTSerial.println(count++);
 }
