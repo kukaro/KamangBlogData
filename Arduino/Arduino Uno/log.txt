@@ -1,0 +1,5 @@
+http://arduino-info.wikispaces.com/file/view/ArduinoUNO-900.jpg/421496636/ArduinoUNO-900.jpg
+우노 보드 핀
+
+http://blog.whoborn.net/아두이노-우노-r3-소개/
+우노 스펙

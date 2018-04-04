@@ -1,0 +1,7 @@
+LED와 저항을 소개
+저항을 계산하는법
+readString()
+그리고 아두이노에 String형이 존재함
+
+http://nsnotification.blogspot.kr/2015/07/blog-post_9.html
+윗 주소 저항 읽는법
