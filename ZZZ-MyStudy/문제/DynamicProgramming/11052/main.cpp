@@ -5,7 +5,7 @@ using namespace std;
 
 int N;
 vector<int> arr;
-vector<vector<int>> memo(MAXSIZE, vector<int>(MAXSIZE, 0));
+vector<int> memo(MAXSIZE, 0);
 
 int f(int n) {
   int max = 0;
