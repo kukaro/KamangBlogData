@@ -20,7 +20,7 @@ int main() {
     Rect2f rect5 = rect2 + (Size2f)sz;
     Rect2d rect6 = rect1 & (Rect)rect2;
 
-    cout << "rect3 = " << rect3.x << rect3.x << ", " << rect3.y << ", ";
+    cout << "rect3 = " << rect3.x << ", " << rect3.y << ", ";
     cout << rect3.width << "x" << rect3.height << endl;
     cout << "rect4 = " << rect4.tl() << " " << rect4.br() << endl;
     cout << "rect5 크기 = " << rect5.size() << endl;
