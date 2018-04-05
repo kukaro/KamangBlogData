@@ -15,7 +15,6 @@ void bfs() {
   while (!q.empty()) {
     tmp = q.front();
     q.pop();
-		cout<<tmp<<":"<<arr[tmp]<<endl;
 		if (tmp == K) {
       break;
     }
