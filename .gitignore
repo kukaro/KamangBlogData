@@ -20,3 +20,6 @@ cmake-build-debug
 
 # vim
 *.swp
+
+# bower
+bower_components

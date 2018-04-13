@@ -1,0 +1,4 @@
+http://blog.jeonghwan.net/2016/08/23/about-angular2-quickstart-libraries.html
+여러 모듈 설명
+
+bower install core-js
