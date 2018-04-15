@@ -2,3 +2,8 @@ npm install -g @angular/cli
 ng new <app-name>
 cd <app-name>
 ng serve
+
+https://medium.com/witinweb/angular-2-cli-로-프로젝트-시작하기-11a188e17223
+여기서 참조
+
+ng build
