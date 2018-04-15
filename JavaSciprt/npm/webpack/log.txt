@@ -1,0 +1,7 @@
+http://jusungpark.tistory.com/52
+
+npm install -g webpack : 전역에서 webpack을 사용할 때
+npm install --save-dev webpack : 특정 의존성으로 설치할 때
+
+
+출처: http://jusungpark.tistory.com/52 [정리정리정리]
