@@ -10,5 +10,4 @@ export class AppComponent {
   animalList = [new Animal('elephant', 4),
     new Animal('kukaro', 2,
     )];
-  objectKeys = Object.keys;
 }
