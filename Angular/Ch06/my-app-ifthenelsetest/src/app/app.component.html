@@ -1,0 +1,7 @@
+<ng-container *ngIf="name.length > 6; then ifCase else elseCase"></ng-container>
+<ng-template #ifCase>
+  <b>{{name}}'s length is bigger than 6</b>
+</ng-template>
+<ng-template #elseCase>
+  <b>{{name}}'s length is not bigger than 6</b>
+</ng-template>
