@@ -7,4 +7,10 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   nameList = ['kukaro', 'jiharu', 'limzz', 'ekekdid'];
+
+  constructor() {
+    for (let name of this.nameList) {
+      console.log(name);
+    }
+  }
 }

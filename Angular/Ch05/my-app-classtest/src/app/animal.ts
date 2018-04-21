@@ -1,3 +1,4 @@
+//animal.ts
 export class Animal {
   private _name: string;
   private _foot: number;
