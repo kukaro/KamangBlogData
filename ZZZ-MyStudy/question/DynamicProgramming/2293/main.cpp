@@ -4,6 +4,7 @@ using namespace std;
 
 int N, K;
 vector<int> arr;
+int memo[101][10001];
 
 int f(int n, int k) {
   int i = 0;
@@ -16,9 +17,14 @@ int f(int n, int k) {
     return 0;
   }
   while (i * arr[n] <= K) {
-    sum += f(n + 1, k - i * arr[n]);
+    if (memo[n + 1][k - i * arr[n]] == 0) {
+      memo[n + 1][k - i * arr[n]] = f(n + 1, k - i * arr[n]);
+    }
+    sum += memo[n + 1][k - i * arr[n]];
+		//sum+=f(n + 1, k - i * arr[n]);
     i++;
   }
+		//cout<<n<<":"<<i<<":"<<sum<<endl;
   return sum;
 }
 
