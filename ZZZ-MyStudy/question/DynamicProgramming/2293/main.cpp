@@ -2,30 +2,34 @@
 #include <vector>
 using namespace std;
 
-int N,K;
+int N, K;
 vector<int> arr;
 
-int f(int k,int m){
-	int result=0;
-	if(k<0){
-		return 0;
-	}else if(k==0){
-		return 1;
-	}
-	for(int n=1;n<=N;n++){
-		result+=f(k-arr[n],arr[n]);
-	}
-	return result;
+int f(int n, int k) {
+  int i = 0;
+  int sum = 0;
+  if (k == 0) {
+    //    cout << n << ":" << k << endl;
+    return 1;
+  }
+  if (n <= 0 || n > N || k < 0) {
+    return 0;
+  }
+  while (i * arr[n] <= K) {
+    sum += f(n + 1, k - i * arr[n]);
+    i++;
+  }
+  return sum;
 }
 
 int main() {
-	int tmp;
-	cin>>N>>K;
-	arr.push_back(0);
-	for(int n=1;n<=N;n++){
-		cin>>tmp;
-		arr.push_back(tmp);
-	}
-	cout<<f(10,0);
+  int tmp;
+  cin >> N >> K;
+  arr.push_back(0);
+  for (int n = 1; n <= N; n++) {
+    cin >> tmp;
+    arr.push_back(tmp);
+  }
+  cout << f(1, K);
   return 0;
 }
