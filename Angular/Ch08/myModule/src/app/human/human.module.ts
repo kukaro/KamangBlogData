@@ -7,11 +7,11 @@ import {WomanComponent} from './woman/woman.component';
   imports: [
     CommonModule
   ],
-  declarations: [ManComponent, WomanComponent],
   exports: [
     ManComponent,
     WomanComponent
-  ]
+  ],
+  declarations: [ManComponent, WomanComponent]
 })
 export class HumanModule {
 }
