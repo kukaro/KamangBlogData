@@ -7,7 +7,7 @@ int T, N;
 vector<int> arr;
 vector<int> result;
 vector<vector<vector<int>>> memo(MAXSIZE,
-                                 vector<vector<int>>(2, vector<int>(2, 0)));
+                                 vector<vector<int>>(2, vector<int>(2, -1)));
 
 int f(int n, bool isChoice, bool isTop) {
   int add = 0;
@@ -21,10 +21,10 @@ int f(int n, bool isChoice, bool isTop) {
   } else {
     cnt = n + N;
   }
-  if (memo[n + 1][true][!isTop] == 0) {
+  if (memo[n + 1][true][!isTop] == -1) {
     memo[n + 1][true][!isTop] = f(n + 1, true, !isTop);
   }
-  if (memo[n + 1][false][!isTop] == 0) {
+  if (memo[n + 1][false][!isTop] == -1) {
     memo[n + 1][false][!isTop] = f(n + 1, false, !isTop);
   }
   next = memo[n + 1][true][!isTop] > memo[n + 1][false][!isTop]
@@ -33,10 +33,10 @@ int f(int n, bool isChoice, bool isTop) {
   if (isChoice) {
     add = arr[cnt];
   } else {
-    if (memo[n + 1][true][isTop] == 0) {
+    if (memo[n + 1][true][isTop] == -1) {
       memo[n + 1][true][isTop] = f(n + 1, true, isTop);
     }
-    if (memo[n + 1][false][isTop] == 0) {
+    if (memo[n + 1][false][isTop] == -1) {
       memo[n + 1][false][isTop] = f(n + 1, false, isTop);
     }
     next = next > memo[n + 1][true][isTop] ? next : memo[n + 1][true][isTop];
@@ -53,7 +53,7 @@ int main() {
     arr.clear();
     arr.push_back(0);
     memo.clear();
-    memo.resize(MAXSIZE, vector<vector<int>>(2, vector<int>(2, 0)));
+    memo.resize(MAXSIZE, vector<vector<int>>(2, vector<int>(2, -1)));
     for (int n = 1; n <= 2 * N; n++) {
       cin >> tmp;
       arr.push_back(tmp);
