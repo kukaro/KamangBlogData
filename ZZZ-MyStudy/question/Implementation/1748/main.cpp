@@ -11,7 +11,7 @@ int main() {
   cin >> N;
   tn = N;
   while (true) {
-    if (tn > carry) {
+    if (tn >= carry) {
       sum += (carry - carry / 10) * cnt;
       cnt++;
       carry *= 10;
