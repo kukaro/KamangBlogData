@@ -16,7 +16,7 @@ int main() {
       cnt++;
       carry *= 10;
     } else {
-      sum += (tn % (carry / 10) + 1) * cnt;
+      sum += (tn-carry/10+1)*cnt; 
       break;
     }
   }
