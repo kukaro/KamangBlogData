@@ -39,13 +39,15 @@ int main() {
       while (!q.empty()) {
         p = q.front();
         q.pop();
-        G[p.x][p.y] = 0;
-        G[p.y][p.x] = 0;
         for (int k = 1; k <= N; k++) {
           if (G[p.x][k] == 1) {
+						G[p.x][k]=0;
+						G[k][p.x]=0;
             q.push(Point(p.x, k));
           }
           if (G[p.y][k] == 1) {
+						G[p.y][k]=0;
+						G[k][p.y]=0;
             q.push(Point(p.y, k));
           }
         }
