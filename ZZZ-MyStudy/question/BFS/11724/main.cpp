@@ -14,6 +14,7 @@ public:
 int N, M;
 vector<vector<int>> G;
 queue<Point> q;
+queue<Point> pq;
 
 int main() {
   Point p;
@@ -26,33 +27,35 @@ int main() {
     cin >> u >> v;
     G[u][v] = 1;
     G[v][u] = 1;
+    pq.push(Point(u, v));
+    pq.push(Point(v, u));
   }
-  for (int i = 1; i <= N; i++) {
-    for (int j = 1; j <= N; j++) {
-      if (G[i][j] == 1) {
-        cnt++;
-        q.push(Point(i, j));
-        while (!q.empty()) {
-          p = q.front();
-          q.pop();
-          G[p.x][p.y] = 0;
-          G[p.y][p.x] = 0;
-          for (int k = 1; k <= N; k++) {
-            if (G[p.x][k] == 1) {
-              q.push(Point(p.x, k));
-            }
-            if (G[p.y][k] == 1) {
-              q.push(Point(p.y, k));
-            }
+  while (!pq.empty()) {
+    p = pq.front();
+    pq.pop();
+    if (G[p.x][p.y] == 1) {
+      cnt++;
+      q.push(Point(p.x, p.y));
+      while (!q.empty()) {
+        p = q.front();
+        q.pop();
+        G[p.x][p.y] = 0;
+        G[p.y][p.x] = 0;
+        for (int k = 1; k <= N; k++) {
+          if (G[p.x][k] == 1) {
+            q.push(Point(p.x, k));
+          }
+          if (G[p.y][k] == 1) {
+            q.push(Point(p.y, k));
           }
         }
-//        for (int i = 1; i <= N; i++) {
-//          for (int j = 1; j <= N; j++) {
-//            cout << G[i][j] << " ";
-//          }
-//          cout << endl;
-//        }
       }
+//      for (int i = 1; i <= N; i++) {
+//        for (int j = 1; j <= N; j++) {
+//          cout << G[i][j] << " ";
+//        }
+//        cout << endl;
+//      }
     }
   }
   cout << cnt << endl;
