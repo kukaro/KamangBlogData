@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
+#include <cstring>
+#define MAXSIZE 55
 using namespace std;
 
-vector<vector<int>> G;
+int G[MAXSIZE][MAXSIZE];
 vector<int> result;
 int W, H;
 
@@ -32,9 +34,8 @@ int main() {
       break;
     }
     tresult = 0;
-    G.clear();
-    G.resize(W + 1, vector<int>(H + 1, 0));
-    for (int h = 1; h <= H; h++) {
+    memset(G,0,sizeof(int)*MAXSIZE*MAXSIZE);
+		for (int h = 1; h <= H; h++) {
       for (int w = 1; w <= W; w++) {
         cin >> tmp;
         G[h][w] = tmp;
