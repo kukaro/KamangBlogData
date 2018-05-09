@@ -23,3 +23,6 @@ cmake-build-debug
 
 # bower
 bower_components
+
+# hwp
+~$*
