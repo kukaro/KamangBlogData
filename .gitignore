@@ -29,3 +29,6 @@ __pycache__
 
 # hwp
 ~$*
+
+# node
+node_modules
