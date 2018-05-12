@@ -24,5 +24,8 @@ cmake-build-debug
 # bower
 bower_components
 
+# python
+__pycache__
+
 # hwp
 ~$*
