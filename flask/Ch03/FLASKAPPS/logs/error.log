@@ -1,0 +1,26 @@
+[Tue May 22 14:34:44.855555 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981] mod_wsgi (pid=7393): Target WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi' cannot be loaded as Python module.
+[Tue May 22 14:34:44.855609 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981] mod_wsgi (pid=7393): Exception occurred processing WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi'.
+[Tue May 22 14:34:44.855622 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981] Traceback (most recent call last):
+[Tue May 22 14:34:44.855633 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981]   File "/var/www/FLASKAPPS/helloworldapp.wsgi", line 3, in <module>
+[Tue May 22 14:34:44.855673 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981]     from helloworldapp import app as application
+[Tue May 22 14:34:44.855699 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981] ImportError: No module named helloworldapp
+[Tue May 22 14:36:43.787930 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981] mod_wsgi (pid=7393): Target WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi' cannot be loaded as Python module.
+[Tue May 22 14:36:43.787960 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981] mod_wsgi (pid=7393): Exception occurred processing WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi'.
+[Tue May 22 14:36:43.787988 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981] Traceback (most recent call last):
+[Tue May 22 14:36:43.788018 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981]   File "/var/www/FLASKAPPS/helloworldapp.wsgi", line 3, in <module>
+[Tue May 22 14:36:43.788079 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981]     from . import app as application
+[Tue May 22 14:36:43.788098 2018] [wsgi:error] [pid 7393] [remote 127.0.0.1:22981] ValueError: Attempted relative import in non-package
+[Tue May 22 14:36:52.226121 2018] [wsgi:error] [pid 7549] [remote 127.0.0.1:43752] mod_wsgi (pid=7549): Target WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi' cannot be loaded as Python module.
+[Tue May 22 14:36:52.226154 2018] [wsgi:error] [pid 7549] [remote 127.0.0.1:43752] mod_wsgi (pid=7549): Exception occurred processing WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi'.
+[Tue May 22 14:36:52.226167 2018] [wsgi:error] [pid 7549] [remote 127.0.0.1:43752] Traceback (most recent call last):
+[Tue May 22 14:36:52.226178 2018] [wsgi:error] [pid 7549] [remote 127.0.0.1:43752]   File "/var/www/FLASKAPPS/helloworldapp.wsgi", line 3, in <module>
+[Tue May 22 14:36:52.226228 2018] [wsgi:error] [pid 7549] [remote 127.0.0.1:43752]     from . import app as application
+[Tue May 22 14:36:52.226254 2018] [wsgi:error] [pid 7549] [remote 127.0.0.1:43752] ValueError: Attempted relative import in non-package
+[Tue May 22 14:38:40.747778 2018] [wsgi:error] [pid 7549] [remote 127.0.0.1:43496] mod_wsgi (pid=7549): Target WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi' does not contain WSGI application 'application'.
+[Tue May 22 14:38:49.164034 2018] [wsgi:error] [pid 7708] [remote 127.0.0.1:42625] mod_wsgi (pid=7708): Target WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi' does not contain WSGI application 'application'.
+[Tue May 22 14:40:44.174477 2018] [wsgi:error] [pid 7893] [remote 127.0.0.1:27017] mod_wsgi (pid=7893): Target WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi' cannot be loaded as Python module.
+[Tue May 22 14:40:44.174512 2018] [wsgi:error] [pid 7893] [remote 127.0.0.1:27017] mod_wsgi (pid=7893): Exception occurred processing WSGI script '/var/www/FLASKAPPS/helloworldapp.wsgi'.
+[Tue May 22 14:40:44.174526 2018] [wsgi:error] [pid 7893] [remote 127.0.0.1:27017] Traceback (most recent call last):
+[Tue May 22 14:40:44.174539 2018] [wsgi:error] [pid 7893] [remote 127.0.0.1:27017]   File "/var/www/FLASKAPPS/helloworldapp.wsgi", line 3, in <module>
+[Tue May 22 14:40:44.174583 2018] [wsgi:error] [pid 7893] [remote 127.0.0.1:27017]     from FLASKAPPS import app as application
+[Tue May 22 14:40:44.174597 2018] [wsgi:error] [pid 7893] [remote 127.0.0.1:27017] ImportError: No module named FLASKAPPS
