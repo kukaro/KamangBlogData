@@ -1,0 +1,14 @@
+https://www.slant.co/topics/1488/~front-end-package-managers
+
+https://stackshare.io/front-end-package-manager
+
+https://d2.naver.com/helloworld/591319
+RequireJS에 대한 깊은 설명
+
+고려할것
+npm
+bower
+RequireJS
+yarn
+jspm
+turbo
