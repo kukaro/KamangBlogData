@@ -1,0 +1,6 @@
+Angular Router Test
+<nav>
+  <a [routerLink]="[{outlets:{root:['introduce']}}]" routerLinkActive="active">introduce page</a>
+  <a [routerLink]="[{outlets:{root:['language']}}]" routerLinkActive="active">language page</a>
+</nav>
+<router-outlet name="root"></router-outlet>
