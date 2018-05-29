@@ -1,0 +1,7 @@
+https://maven.apache.org/
+
+http://apache.tt.co.kr/maven/maven-2/
+
+http://apache.tt.co.kr/maven/maven-3/
+
+http://apache.tt.co.kr/maven/maven-3/3.5.3/binaries/
