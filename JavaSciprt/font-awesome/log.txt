@@ -1,0 +1,18 @@
+https://fontawesome.com/
+https://fontawesome.com/how-to-use/svg-with-js
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
+
+index.html
+<head>
+ <!--core first + styles last-->
+ <link href="/static/fontawesome/fontawesome-all.css" rel="stylesheet">
+</head>
+<body>
+ <!--user icon in two different styles-->
+ <i class="fas fa-user"></i>
+ <i class="far fa-user"></i>
+ <!--brand icon-->
+ <i class="fab fa-github-square"></i>
+</body>

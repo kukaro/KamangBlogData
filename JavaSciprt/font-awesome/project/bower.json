@@ -1,0 +1,20 @@
+{
+  "name": "project",
+  "homepage": "https://github.com/kukaro/KamangBlogData",
+  "authors": [
+    "kukaro <justkukaro@naver.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^5.0.13"
+  }
+}

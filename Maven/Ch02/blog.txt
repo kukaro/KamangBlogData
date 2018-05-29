@@ -1,16 +1,23 @@
-#메이븐은 앤트와 달리 라이프사이클이 이미제공되어 있다.
-또한 이 라이프사이클을 임의로 건너뛰거나 없애거나 하는건 불가능하다.
-앤트에 비해서 확실히 융통성은 떨어진다.
-그러나 꼭 필요한 과정들이 있기에 사용에 큰 불편함은 없다.
+?maven을 각각의 운영체제에서 설치하는 방법
+?maven의 라이프 사이클에 대한 설명과 ant와의 차이점
 
-mvn은 총 세개의 라이프사이클을 기본으로 제공한다.
+#간단한 maven프로젝트를 만드는건 간단한 ant프로젝트를 만드는 것에 비해서 손이 조금 간다.
+아래와 같이 명령어를 타이핑해보자.
 
-기본 라이프 사이클 - 컴파일,테스트,패키지생성,압축,배포의 단계를 거친다
-clean 라이프 사이클 - mvn으로 인한 결과물을 다시 지운다.
-site 라이프 사이클 - mvn의 프로젝트를 html결과로 볼 수 있게 docs를 html로 만든다.
+mvn archetype:generate -DgroupId=net.theceres -DartifactId=CommandLineMakeMaven -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 
-이중에 기본 라이프 사이클을 알아보도록하자.
-기존 라이프 사이클은 컴파일(compile)->테스트(test)->패키지(package)->인스톨(install)->배포(deploy)의 단계를 거친다고했다.
-이 각각의 과정을 페이즈라고 부른다. 사실 페이즈는 이것보다 더 많다.
-어쨋든 페이즈라는 것은 특정 상황을 생각하면되겠다.
-그 페이즈에서 특정 목표가있다. 이 것을 goal이라고 생각하면되겠다.
+아니 뭐가 이렇게 명령어가 기냐고 생각할 수 있다.
+위의 명령어가 길어진데는 사실 그만한 이유가 있다.
+사실 더 줄여서 아래와 같이 쓸 수도 있다.
+
+mvn archetype:generate
+
+경우에 따라서 이방법이 덜 귀찮을 수도 있지만 자동화를 하고싶다면 위의 명령어를 한번 적어두면 쉽게 maven을 다시 제작할 수 있다.
+maven은 pom.xml을 만들고 그걸 실행해서 maven전용 디렉터리 구조를 만들게 되는데 일반적인 구조는 아래와 같다.
+
+<pom.xml:artifactId>
+⎿src
+  ⎿main <- 소스디렉터리로 인식
+    ⎿<pom.xml:groupId> <-패키지화 됨
+  ⎿test <- 유닛테스트디렉터로 인식
+    ⎿<pom.xml:groupId> <-패키지화 됨
