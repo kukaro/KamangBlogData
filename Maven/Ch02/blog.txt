@@ -3,6 +3,7 @@
 
 #간단한 maven프로젝트를 만드는건 간단한 ant프로젝트를 만드는 것에 비해서 손이 조금 간다.
 아래와 같이 명령어를 타이핑해보자.
+만약 안되면 sudo를 추가해줘라
 
 mvn archetype:generate -DgroupId=net.theceres -DartifactId=CommandLineMakeMaven -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 
