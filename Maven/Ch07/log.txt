@@ -1,0 +1,10 @@
+mvn archetype:generate -DinteractiveMode=false -DgroupId=net.theceres -DartifactId=CommandLineMakeMaven
+
+
+https://mvnrepository.com/artifact/javazoom/jlayer/1.0.1
+
+<dependency>
+    <groupId>javazoom</groupId>
+    <artifactId>jlayer</artifactId>
+    <version>1.0.1</version>
+</dependency>
