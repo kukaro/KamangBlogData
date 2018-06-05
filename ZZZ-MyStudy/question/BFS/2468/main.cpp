@@ -63,7 +63,7 @@ int bfs(int n) {
 //    cout << endl;
 //  }
 //  cout << "**********" << endl;
-//  return result_val;
+  return result_val;
 }
 
 int main() {
