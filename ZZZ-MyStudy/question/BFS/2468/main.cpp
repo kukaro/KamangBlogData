@@ -12,6 +12,7 @@ public:
 };
 
 int N;
+int cnt;
 vector<vector<int>> arr;
 vector<vector<int>> ans;
 int max_val;
@@ -54,15 +55,15 @@ int bfs(int n) {
       }
     }
   }
-  //  cout << "**********" << endl;
-  //  for (int i = 1; i <= N; i++) {
-  //    for (int j = 1; j <= N; j++) {
-  //      cout << ans[i][j] << " ";
-  //    }
-  //    cout << endl;
-  //  }
-  //  cout << "**********" << endl;
-  return result_val;
+//  cout << "**********" << endl;
+//  for (int i = 1; i <= N; i++) {
+//    for (int j = 1; j <= N; j++) {
+//      cout << ans[i][j] << " ";
+//    }
+//    cout << endl;
+//  }
+//  cout << "**********" << endl;
+//  return result_val;
 }
 
 int main() {
@@ -72,10 +73,11 @@ int main() {
   for (int i = 1; i <= N; i++) {
     for (int j = 1; j <= N; j++) {
       cin >> tmp;
+			cnt=cnt>tmp?cnt:tmp;
       arr[i][j] = tmp;
     }
   }
-  for (int n = 1; n <= N; n++) {
+  for (int n = 1; n <= cnt; n++) {
     ans.clear();
     ans.resize(N + 1, vector<int>(N + 1, 0));
     tmp = bfs(n);
