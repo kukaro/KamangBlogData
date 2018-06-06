@@ -1,8 +1,5 @@
 package net.theceres;
 
-import javax.swing.*;
-import java.awt.*;
-
 /**
  * Hello world!
  */
