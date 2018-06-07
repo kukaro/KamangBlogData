@@ -1,1 +1,4 @@
 https://gradle.org/
+
+https://www.slipp.net/wiki/pages/viewpage.action?pageId=11632679
+그레이들에 필요한 그루비언어
