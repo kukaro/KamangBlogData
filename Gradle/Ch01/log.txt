@@ -2,3 +2,6 @@ https://gradle.org/
 
 https://www.slipp.net/wiki/pages/viewpage.action?pageId=11632679
 그레이들에 필요한 그루비언어
+
+https://code-examples.net/ko/q/108e74f
+그루비 스크립트 실행 예시
