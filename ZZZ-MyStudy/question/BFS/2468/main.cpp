@@ -63,6 +63,8 @@ int bfs(int n) {
 //    cout << endl;
 //  }
 //  cout << "**********" << endl;
+//  cout << result_val << endl;
+//  cout << "**********" << endl;
   return result_val;
 }
 
@@ -73,15 +75,15 @@ int main() {
   for (int i = 1; i <= N; i++) {
     for (int j = 1; j <= N; j++) {
       cin >> tmp;
-			cnt=cnt>tmp?cnt:tmp;
+      cnt = cnt > tmp ? cnt : tmp;
       arr[i][j] = tmp;
     }
   }
-  for (int n = 1; n <= cnt; n++) {
+  for (int n = 0; n <= cnt; n++) {
     ans.clear();
     ans.resize(N + 1, vector<int>(N + 1, 0));
     tmp = bfs(n);
-//		cout<<tmp<<"*"<<endl;
+    //		cout<<tmp<<"*"<<endl;
     max_val = max_val > tmp ? max_val : tmp;
   }
   cout << max_val << endl;
