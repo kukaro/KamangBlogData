@@ -2,7 +2,7 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
-#define MAXSIZE 200
+#define MAXSIZE 400
 using namespace std;
 
 class Point {
