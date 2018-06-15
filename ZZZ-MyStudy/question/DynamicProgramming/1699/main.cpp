@@ -26,9 +26,9 @@ int main() {
       }
     }
   }
-  for (int n = 1; n <= N; n++) {
-    cout << n << ":" << arr[n] << endl;
-  }
+  // for (int n = 1; n <= N; n++) {
+  //   cout << n << ":" << arr[n] << endl;
+  // }
   cout << arr[N] << endl;
   return 0;
 }
