@@ -18,11 +18,11 @@ int main() {
     if (pow(tmp, 2) == n) {
       arr[n] = 1;
     } else {
-				arr[n]=arr[pow(tmp,2)]+arr[n-pow(tmp,2)];
-      for (int i = tmp-1; i >= 1; i--) {
-        arr[n]=arr[n] < arr[pow(i, 2)] + arr[n - pow(i, 2)]
-            ? arr[n]
-            : arr[pow(i, 2)] + arr[n - pow(i, 2)];
+      arr[n] = arr[pow(tmp, 2)] + arr[n - pow(tmp, 2)];
+      for (int i = tmp - 1; i >= 1; i--) {
+        arr[n] = arr[n] < arr[pow(i, 2)] + arr[n - pow(i, 2)]
+                     ? arr[n]
+                     : arr[pow(i, 2)] + arr[n - pow(i, 2)];
       }
     }
   }
