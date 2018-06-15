@@ -16,6 +16,7 @@ void print_memo(){
 
 int main(){
 	int tmp;
+	int tm;
 	cin>>N;
 	A.push_back(0);
 	memo.resize(N+1,0);
@@ -25,14 +26,16 @@ int main(){
 	}
 	for(int n=1;n<=N;n++){
 		memo[n] = tmp = A[n];
+		tm = 0;
 		for(int i=n-1;i>0;i--){
-			if(A[i]<tmp){
-				memo[n]+=A[i];
-				tmp = A[i];
+			if(A[i]<tmp && tm<memo[i]){
+				tm = memo[i];
 			}
 		}
+		memo[n]+=tm;
 		max_val = max_val>memo[n]?max_val:memo[n];
 	}
+	//print_memo();
 	cout<<max_val<<endl;
 	return 0;
 }
