@@ -38,6 +38,9 @@ int main(){
 		}
 	}
 	for(int v=1;v<=V;v++){
+		if(v==START_VERTEX){
+			continue;
+		}
 		tmp = d[v][START_VERTEX]+d[START_VERTEX][v];
 		max_val=max_val>tmp?max_val:tmp;
 	}
