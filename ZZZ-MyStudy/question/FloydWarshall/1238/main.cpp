@@ -41,7 +41,7 @@ int main(){
 		tmp = d[v][START_VERTEX]+d[START_VERTEX][v];
 		max_val=max_val>tmp?max_val:tmp;
 	}
-	cout<<tmp<<endl;
-	//print_d();	
+	cout<<max_val<<endl;
+	//print_d();
 	return 0;
 }
