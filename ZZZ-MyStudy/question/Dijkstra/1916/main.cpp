@@ -14,9 +14,7 @@ public:
   Vertex(int v, int w) : v(v), w(w) {}
 };
 
-bool operator<(Vertex a,Vertex b){
-	return a.w<b.w;
-}
+bool operator<(Vertex a, Vertex b) { return a.w < b.w; }
 
 int N;
 int M;
@@ -43,7 +41,7 @@ void print_distance() {
 }
 
 int main() {
-	Vertex pres;
+  Vertex pres;
   int tu, tv, tw;
   cin >> N >> M;
   for (int m = 1; m <= M; m++) {
@@ -53,18 +51,18 @@ int main() {
   cin >> START_VERTEX >> END_VERTEX;
   init_distance(START_VERTEX);
   init_heap(START_VERTEX);
-  while (!heap.empty()){
-		pres = heap.top();
-		s.push(heap.top());
-		heap.pop();
-		for(Vertex next:G[pres.v]){
-			if(d[next.v]>pres.w+next.w){
-				d[next.v]=pres.w+next.w;
-				heap.push(Vertex(next.v,d[next.v]));
-			}
-		}
-	}
-	//print_distance();
-	cout<<d[END_VERTEX]<<endl;
+  while (!heap.empty()) {
+    pres = heap.top();
+    s.push(heap.top());
+    heap.pop();
+    for (Vertex next : G[pres.v]) {
+      if (d[next.v] > pres.w + next.w) {
+        d[next.v] = pres.w + next.w;
+        heap.push(Vertex(next.v, d[next.v]));
+      }
+    }
+  }
+  // print_distance();
+  cout << d[END_VERTEX] << endl;
   return 0;
 }
