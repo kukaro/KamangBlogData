@@ -46,7 +46,7 @@ int main(int argc, const char *argv[]) {
     split(image,mat_arr);
     Rect roi[3];
     int res[3]={0,};
-    int all=0;
+    int all[3]={0,};
     for(int i=0;i<3;i++){
         roi[i] = Rect(50,50,100,100);
         roi_img[i]=mat_arr[i](roi[i]);
@@ -63,12 +63,16 @@ int main(int argc, const char *argv[]) {
     for(int n=0;n<3;n++){
         cout<<n<<":"<<res[n]<<endl;
     }
-    for(int i=0;i<image.rows;i++){
-        for(int j=0;j<image.cols;j++){
-            all+=(mat_arr[0].at<uchar>(i,j)+mat_arr[1].at<uchar>(i,j)+mat_arr[2].at<uchar>(i,j))/3;
+    for(int n=0;n<3;n++){
+        for(int i=0;i<image.rows;i++){
+            for(int j=0;j<image.cols;j++){
+                all[n]+=mat_arr[n].at<uchar>(i,j);
+            }
         }
+        all[n]/=image.rows*image.cols;
     }
-    all/=image.rows*image.cols;
-    cout<<"all:"<<all<<endl;
+    for(int n=0;n<3;n++){
+        cout<<n<<":"<<all[n]<<endl;
+    }
     return 0;
 }
