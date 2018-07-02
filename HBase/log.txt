@@ -1,0 +1,21 @@
+http://blog.embian.com/10
+HBase와 Hadoop
+
+http://bitnine.tistory.com/entry/HBase에-대하여-1-–-개요
+HBase 특징
+
+/usr/local/Cellar/hadoop/3.1.0
+하둡위치
+
+/usr/local/Cellar/hadoop/3.1.0/libexec/etc/hadoop
+
+core-site.xml위치
+
+http://blog.naver.com/PostView.nhn?blogId=c_ist82&logNo=220755127226&parentCategoryNo=&categoryNo=9&viewDate=&isShowPopularPosts=false&from=postView
+
+/usr/local/Cellar/hbase/1.2.6.1
+hbase 위치
+
+하둡 namenode 포멧해야함
+
+http://alnova2.tistory.com/1044
