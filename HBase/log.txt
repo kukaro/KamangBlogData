@@ -19,3 +19,6 @@ hbase 위치
 하둡 namenode 포멧해야함
 
 http://alnova2.tistory.com/1044
+
+수순
+하둡설치->하둡안에 네임노드 초기화->주키퍼설치->주키퍼안에 시큐어넣음->hbase설치->hbase에 주키퍼세이퍼 연결함->실행
