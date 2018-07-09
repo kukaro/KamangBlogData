@@ -45,7 +45,7 @@ bool operator==(BigInt a, BigInt b) {
 }
 
 ll N, M;
-vector<vector<BigInt>> memo(MAXSIZE, vector<BigInt>(MAXSIZE, BigInt(-1)));
+vector<vector<BigInt> > memo(MAXSIZE, vector<BigInt>(MAXSIZE, BigInt(-1)));
 
 BigInt comb(int n, int k) {
     if (k == 0 || n == k) {
