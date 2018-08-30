@@ -1,3 +1,6 @@
 104     tf.squeeze는 1차원 텐서 제거임
 113     np.linspace(0, 10, 100)은 0에서 10까지의 숫자를 100개 들어갈 간격으로 배치한다.
         e​valution는 평가하다
+        tf.transpose는 전치행렬을 만든다
+        np.column_stack - https://docs.scipy.org/doc/numpy/reference/generated/numpy.column_stack.html
+        slope - 기울기
