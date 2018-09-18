@@ -1,0 +1,11 @@
+https://echo.labstack.com/
+echo 공식 홈페이지
+
+https://echo.labstack.com/guide
+따라해서 설치하면 됩니다.
+
+go get -u github.com/labstack/echo/...
+위의 명령어를 쓰려면 git이 설치뒤어 있어야합니다.
+
+https://github.com/golang/go/wiki/SettingGOPATH
+go path를 설정하는 방법이다.
