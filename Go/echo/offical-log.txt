@@ -1,0 +1,24 @@
+https://kihoonkim.github.io/2017/04/02/reactgo/reactgo-3-packagemanager/
+dep 설명
+
+https://medium.com/@kyawmyintthein/building-golang-restful-api-with-echo-framework-1-422abc78e3a7
+echo skeleton
+
+https://github.com/golang/go/wiki/PackageManagementTools
+go packagemanager설명
+
+https://github.com/eurie-inc/echo-sample
+https://github.com/nrikiji/go-echo-sample/blob/master/main.go
+https://github.com/hb-go/echo-web
+echo skeleton 예제
+
+https://www.ardanlabs.com/blog/2017/02/package-oriented-design.html
+go의 package oriented design
+
+https://www.netlify.com/blog/2016/10/20/building-a-restful-api-in-go/
+
+https://echo.labstack.com/
+에코 공식
+
+https://echo.labstack.com/cookbook/subdomains
+subdomain 예제
