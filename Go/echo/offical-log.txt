@@ -22,3 +22,5 @@ https://echo.labstack.com/
 
 https://echo.labstack.com/cookbook/subdomains
 subdomain 예제
+
+orm, 혹은 dao 모델중에 선택
