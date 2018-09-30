@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input v-model="name"><br>
+    {{name}}
+</div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: 'kukaro',
+            age: 26,
+        },
+    });
+</script>
+</html>
