@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function functionDeclaration(args) {
+        console.log(`function expression : ${args}`);
+    };
+
+    var functionExpressionNormal = function (args) {
+        console.log(`function declaration normal : ${args}`);
+    };
+
+    var functionExpressionArrow = (args) => {
+        console.log(`function declaration arrow : ${args}`);
+    };
+
+    var functionConstructor = new Function('args', `console.log(\`function constructor : \${args}\`);`);
+
+    var param = 'test';
+
+    functionDeclaration(param);
+    functionExpressionNormal(param);
+    functionExpressionArrow(param);
+    functionConstructor(param);
+
+</script>
+</body>
+</html>
