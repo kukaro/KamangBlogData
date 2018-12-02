@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var global = 'global';
+    function f(){
+        if(false){
+            let global = 'inner';
+        }
+        console.log(global);
+    }
+    f();
+</script>
+</body>
+</html>
