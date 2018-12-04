@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var G = function () {
+        console.log(this);
+    };
+
+    G.prototype.func = function () {
+        return (() => {
+            console.log(this);
+        })();
+    };
+
+    // var test = {
+    //     f: {
+    //         f:()=>{
+    //             console.log(this);
+    //         }
+    //     }
+    // };
+    var g = new G();
+    g.func();
+</script>
+</body>
+</html>
