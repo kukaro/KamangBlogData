@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Book(owner) {
+        this.owner = owner;
+    }
+
+    Book.prototype.page = 150;
+    Book.prototype.info = function () {
+        console.log(`book title is ${this.owner}`);
+    };
+
+    var book = new Book('kukaro');
+
+    console.log(Book.prototype);
+    console.log(book);
+    book.info();
+</script>
+</body>
+</html>

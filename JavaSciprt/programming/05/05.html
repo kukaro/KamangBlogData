@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Book {
+        constructor(owner) {
+            this.owner = owner;
+        }
+
+        info() {
+            console.log(`book title is ${this.owner}`);
+        }
+    }
+
+    Book.prototype.page = 150;
+
+    var book = new Book('kukaro');
+
+    console.log(Book.prototype);
+    console.log(book);
+    book.info();
+</script>
+</body>
+</html>

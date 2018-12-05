@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Book {
+        constructor(owner) {
+            this.owner = owner;
+        }
+
+        info() {
+            console.log(`book title is ${this.owner}`);
+        }
+
+        static test() {
+            console.log('함수 테스트');
+        }
+    }
+
+    var book = new Book('kukaro');
+
+    Book.page = 150;
+
+    console.log(Book.page);
+    Book.test();
+</script>
+</body>
+</html>
