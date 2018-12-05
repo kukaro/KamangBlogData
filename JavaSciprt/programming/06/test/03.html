@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var myObj = {
+        num1: 10,
+        num2: 5,
+        sum: function () {
+            console.log(this === myObj);
+            console.log(this.num1 + this.num2);
+        },
+        sub: () => {
+            console.log(this === myObj);
+            console.log(this.num1 - this.num2);
+        }
+    };
+    // myObj.sum();
+    // myObj.sub();
+
+    function Point(x,y) {
+
+        this.x = x;
+        this.y = y;
+        this.sum = function () {
+            console.log(this);
+            console.log(this.x + this.y);
+        }
+        console.log(this);
+    }
+
+    var point = new Point(10, 5);
+    point.sum();
+
+    // setTimeout(point.sum, 1000);
+
+</script>
+</body>
+</html>

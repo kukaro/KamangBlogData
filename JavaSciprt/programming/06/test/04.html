@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Point(x, y) {
+        console.log(this.constructor.name);
+        this.x = x;
+        this.y = y;
+    }
+
+    var point = new Point(10, 5);
+</script>
+</body>
+</html>

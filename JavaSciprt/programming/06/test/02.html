@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f() {
+        'use strict';
+        console.log(this);
+    }
+
+    var g = () => {
+        console.log(this);
+    };
+
+    f();
+    g();
+</script>
+</body>
+</html>
+
