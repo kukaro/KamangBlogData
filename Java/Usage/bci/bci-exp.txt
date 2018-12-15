@@ -1,0 +1,83 @@
+자바를 어느정도 사용하다보면 드디어 도달하게 되는 분야가 있다.
+바로 클래스 자체를 건드리는 방법이다.
+여기서 말하는 클래스는 .class파일을 의미한다.
+여러분도 모두 알다시피 모든 .java파일은 .class로 번역된다.
+그래서 .class를 jvm이 읽어들이는 방식으로 자바는 동작한다.
+
+#일단 .class를 수정한다는게 무슨말인지에 대해서 알아보자.
+자바는 객체지향이고 대부분의 데이터는 객체로 이루어져있다.
+String도 객체고 Object도 객체고 System도 객체이다.
+그런데 여러분은 "남이 만든 객체에 내 코드를 삽입하고 싶다."는 욕망이 꿈틀댄 적이 있을 것이다.
+필자도 그런적이 있었다. 가령 Position클래스를 남이 만들어 뒀다고 가정하자.
+클래스의 생성자를 호출할 때마다 나는 "Position 생성자 호출"이라는 글자를 화면에 출력하고 싶다고 가정해보자.
+그러면 여러분들은 어떻게 해야하는가? 당장 떠오르는 방법은 이 파일의 소스파일을 찾아서 재컴파일을 한후 기존 파일을 대체해서 사용하는 것이다.
+하지만 이 방식에는 아주아주아주 치명적인 문제점이 있다.
+
+1. 원본을 수정해야한다. 이는 유연한 코딩을 심각하게 방해하게된다.
+2. 원본이 오픈소스가 아니라면 소스파일을 구할 수 없다. 그렇다면 위의 방식은 거의 무용지물이 된다.
+3. 원본이 오픈소스일지라도 String이나 Math같은 기본 클래스는 함부로 수정할 수 없다.
+
+그러면 원본은 그대로 두면서 우리가 만든 코드를 삽입할 수 있는 기술이 필요하게 된다.
+다른 대안이 과연 없는 것일까?
+여기서 우리는 힌트를 얻을 수 있다.
+만약 이미 있는 자바 파일을 변경한다면 두가지 방식을 취할 수 있다.
+
+1.실행 시간 중 .java파일을 읽어서 변경한다.
+2.실행 시간 중 .class파일을 읽어서 변경한다.
+
+1번 방식은 사용하기 까다롭다. 그 이유는 사람마다 만드는 코드가 다르기 때문이다.
+즉 컴파일러 수준의 작성이 필요하다. 그래서 현실적으로 2번 방식을 택하게 된다.
+그래서 우리는 이 .class파일을 읽어서 변경하게 된다면 기존의 클래스에 코드를 삽입하지 않고 변경할 수 있게 된다. 
+
+이렇게 .class파일을 실행시간동안 변경해 버리게만드는 기술을 bci이다.
+여기서 변경한다는 말을 하였지만 사실 원본을 변경하는건 아니고(물론 그렇게도 할 순있지만) 원본에 덧붙힌 새로운 파일을 만들어 내게 된다.
+이 방식은 여러가지 장점을 만들어 낸다.
+
+1.원본을 수정하지 않으므로 유연한코딩이 가능하다.
+2.원본이 오픈소스건 아니건 상관없이 코드를 삽입 할 수 있다.
+3.내가 원하는 .class에 일괄 삽입이 가능하다.
+
+이러한 기술의 이름을 BCI(Byte Code Injection)이라고 부른다. 한국말로 번역하면 바이트코드 삽입이 되겠다.
+이는 AspectJ나 Spring의 AOP에서 등장하는 개념이다. 즉 Spring의 AOP는 사실 BCI로 만든 것이다.
+
+이러한 BCI를 지원하는 라이브러리는 여러 종류가 있지만 여기서는 asm만 논하겠다.
+다른 라이브러리가 필요하다면 알아서 조사해서 사용하면 될것이다.
+
+#일단 예제를 하기 위해서는 두가지의 라이브러리가 필요하다.
+#https://repository.ow2.org/nexus/#nexus-search;quick~asm
+
+우리의 목표를 가정해 보자
+여러분이 특정 클래스를 생성했을 때 그 클래스의 toString을 호출해서 생성을 확인하는 디버그를 자주할 것이다.
+그러한 상황을 재현하기 위해서 문자열의 생성자가 호출될 때마다 어떤 문자열을 생성했는지 출력하자.
+https://asm.ow2.io/javadoc/
+
+##
+docs
+ClassReader
+public class ClassReader
+extends java.lang.Object
+A parser to make a ClassVisitor visit a ClassFile structure, as defined in the Java Virtual Machine Specification (JVMS). This class parses the ClassFile content and calls the appropriate visit methods of a given ClassVisitor for each field, method and bytecode instruction encountered.
+
+ClassVisitor
+public abstract class ClassVisitor
+extends java.lang.Object
+A visitor to visit a Java class. The methods of this class must be called in the following order: visit [ visitSource ] [ visitModule ][ visitNestHost ][ visitOuterClass ] ( visitAnnotation | visitTypeAnnotation | visitAttribute )* ( visitNestMember | visitInnerClass | visitField | visitMethod )* visitEnd.
+
+ClassWriter
+public class ClassWriter
+extends ClassVisitor
+A ClassVisitor that generates a corresponding ClassFile structure, as defined in the Java Virtual Machine Specification (JVMS). It can be used alone, to generate a Java class "from scratch", or with one or more ClassReader and adapter ClassVisitor to generate a modified class from one or more existing Java classes.
+
+CreateAdapter
+public class ClassAdapter
+implements ClassVisitor
+An empty ClassVisitor that delegates to another ClassVisitor . This class can be used as a super class to quickly implement usefull class adapter classes, just by overriding the necessary methods.
+
+자 여러번은 이제 3가지의 클래스를 알면된다.(버전에 따라서는 4가지)
+ClassReader - 외부의 .class를 읽어오는 클래스이다.
+ClassAdapter,ClassVisitor - 우리가 .class파일을 변경한다. 여기서 adapter(class)는 visitor(interface)를 상속받아서 만드는데 원래도 깡으로 visitor를 쓰는 일은 거의 없었고 adapter를 반드시 상속받아서 썼었다. 그래서 그런지 3.3.1버전 이후로는 Adapter가 Visitor에 포함됬다. 그래서 4버전 이후로의 visitor는 abstract class이다.
+ClassWriter - .class를 쓴다. 바로 파일로 쓰는 메소드가 없고 바이트 배열로 변형시켜주는데 이를 이용해서 추후에 FileOutputStream일 이용해서 쓰게된다.
+
+이 까지만 배우면 로직은 쉽다.
+reader로 읽고 adapter(visitor)로 변경한후 writer로 쓴다.
+그리고 정말 다행히도 여러분이 직접 건드릴 부분은 여러분도 쉬이 예상하겠지만 adapter(visitor)만 손대면 된다.
