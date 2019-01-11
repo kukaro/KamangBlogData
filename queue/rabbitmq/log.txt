@@ -1,0 +1,10 @@
+http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220419853534&parentCategoryNo=&categoryNo=6&viewDate=&isShowPopularPosts=false&from=postView
+RabbitMQ를 쓰는 이유
+
+https://www.rabbitmq.com/releases/rabbitmq-java-client/
+https://rabbitmq.github.io/rabbitmq-java-client/api/current/overview-summary.html
+docs
+
+http://kimseunghyun76.tistory.com/424
+http://itstory.tk/entry/RabbitMQ-PublishSubscribe
+굉장히 좋은 예제
