@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Styling in React</title>
+    <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+<body>
+<div id="container">
+</div>
+<script type="text/babel">
+    var Square = React.createClass({
+        render: function () {
+            var squareStyle = {
+                height: 150,
+                backgroundColor: '#FF6663'
+            };
+
+            return(
+                <div style={squareStyle}>
+                </div>
+            );
+        }
+    });
+
+    var Label = React.createClass({
+        render: function () {
+            var labelStyle = {
+                fontFamily: 'sans-serif',
+                fontWeight: 'bold',
+                padding: 13,
+                margin: 0
+            };
+            return(
+                <p style={labelStyle}>
+                    #FF6663
+                </p>
+            );
+        }
+    });
+
+    var Card = React.createClass({
+        render: function () {
+            var cardStyle = {
+              height: 200,
+              width: 150,
+              padding: 0,
+              backgroundColor: '#FFFFFF',
+              WebkitFilter: 'drop-shadow(0px 0px 5px #666666)',
+              filter: 'drop-shadow(0px 0px 5px #666666)'
+            };
+            return (
+                <div style={cardStyle}>
+                    <Square/>
+                    <Label/>
+                </div>
+            );
+        }
+    });
+
+    ReactDOM.render(
+        <div>
+            <Card/>
+        </div>,
+        document.querySelector('#container')
+    );
+</script>
+<style>
+    #container {
+        padding: 50px;
+        background-color: #FFFFFF;
+    }
+</style>
+</body>
+</html>

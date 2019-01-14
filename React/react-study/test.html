@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // var test = {
+    //     foo: 25,
+    //     bar: function () {
+    //         console.log(`Inside bar: ${this.foo}`)
+    //     }
+    // };
+    // var test2 = {
+    //     foo: 25,
+    //     bar: () => {
+    //         console.log(this)
+    //         console.log(`Inside bar: ${this.foo}`)
+    //     }
+    // };
+    // var test3 = (()=>{
+    //     console.log(`Inside test3 : ${this.foo}`)
+    // }).bind(undefined,test2);
+    // test.bar();
+    // test2.bar();
+    // test3.call(test2);
+    var obj = {};
+    var obj2 = new Object();
+    console.log(obj);
+    console.log(obj2);
+    function Person () {
+
+    };
+    console.log(Person)
+    console.log(Person.prototype)
+</script>
+</body>
+</html>
