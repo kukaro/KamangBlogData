@@ -1,1 +1,2 @@
-module.exports = 'slave';
+let atom = 'slave';
+module.exports = atom;

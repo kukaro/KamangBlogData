@@ -16,7 +16,7 @@ gulp.task('default', () => {
     console.log('default');
     return gulp.src(DIR.SRC)
         // .pipe(uglyfi())
-        .pipe(minify())
+        // .pipe(minify())
         .pipe(concat('all.js'))
         .pipe(gulp.dest(DIR.DEST));
 });

@@ -1,5 +1,4 @@
-var slave=require("./slave");console.log(slave);
+let atom = 'slave';
+module.exports = atom;
 var slave = require('./slave');
 console.log(slave);
-module.exports="slave";
-module.exports = 'slave';
