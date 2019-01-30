@@ -1,0 +1,41 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Long polling chatting</title>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<textarea cols="40" rows="20" id="chatArea"></textarea><br>
+<input type="text" name="chatText" id="test">&nbsp;
+<input type="button" value="보내기" onclick="reqMsg()">
+<script>
+    function reqMsg() {
+        let chatText =$(`[name="chatText"]`);
+        let sendData = chatText.val();
+        chatText.val('');
+        console.log(sendData);
+        axios.post('http://localhost:3000/msg', {sendData})
+            .then((res) => {
+                console.log('post success');
+            })
+            .catch((res) => {
+                console.log('post fail');
+            })
+    }
+
+
+    var myiframe = document.createElement('iframe');
+    myiframe.id = 'chat-frame';
+    document.body.appendChild(myiframe);
+    myiframe.style.position = 'absolute';
+    myiframe.style.top = '-100px';
+    myiframe.style.left = '-100px';
+    myiframe.style.width = '1px';
+    myiframe.style.height = '1px';
+    myiframe.src = 'http://localhost:3000/chat'
+</script>
+</body>
+</html>
