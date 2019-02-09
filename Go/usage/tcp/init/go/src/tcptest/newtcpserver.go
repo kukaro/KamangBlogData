@@ -7,16 +7,16 @@ import (
 )
 
 func main() {
-	l, err := net.Listen("tcp", ":5032")
+	l, err := net.Listen("tcp", ":8000")
 	if nil != err {
-		log.Fatalf("fail to bind address to 5032; err: %v", err)
+		log.Println(err);
 	}
 	defer l.Close()
 
 	for {
 		conn, err := l.Accept()
 		if nil != err {
-			log.Printf("fail to accept; err: %v", err)
+			log.Println(err);
 			continue
 		}
 		defer conn.Close()
@@ -25,20 +25,25 @@ func main() {
 }
 
 func ConnHandler(conn net.Conn) {
-	recvBuf := make([]byte, 4096) // receive buffer: 4kB
+	recvBuf := make([]byte, 4096)
 	for {
 		n, err := conn.Read(recvBuf)
 		if nil != err {
 			if io.EOF == err {
-				log.Printf("connection is closed from client; %v", conn.RemoteAddr().String())
+				log.Println(err);
 				return
 			}
-			log.Printf("fail to receive data; err: %v", err)
+			log.Println(err);
 			return
 		}
 		if 0 < n {
 			data := recvBuf[:n]
 			log.Println(string(data))
+			_, err = conn.Write(data[:n])
+			if err != nil {
+				log.Println(err)
+				return
+			}
 		}
 	}
 }
