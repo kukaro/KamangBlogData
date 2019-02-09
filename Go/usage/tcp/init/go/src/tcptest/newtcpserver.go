@@ -39,7 +39,7 @@ func ConnHandler(conn net.Conn) {
 		if 0 < n {
 			data := recvBuf[:n]
 			log.Println(string(data))
-			_, err = conn.Write(data[:n])
+			//_, err = conn.Write(data[:n])
 			if err != nil {
 				log.Println(err)
 				return
