@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>web storage test<%= Math.floor(Math.random() * 100) %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>web storage test</h1>
+<script>
+    window.onstorage = function (event) {
+        console.log(event);
+    }
+    localStorage.setItem('name', 'kukaro');
+    localStorage.setItem('name', 'jiharu');
+    localStorage.clear();
+    console.log(localStorage)
+</script>
+</body>
+</html>
+
+<!--<script>-->
+<!--localStorage.setItem('name','kukaro');-->
+<!--console.log(localStorage.getItem('name'));-->
+<!--console.log(localStorage)-->
+<!--console.log(localStorage.constructor.name)-->
+<!--</script>-->
+
+<!--<script>-->
+<!--localStorage.name = 'kukaro';-->
+<!--console.log(localStorage.name);-->
+<!--console.log(localStorage)-->
+<!--console.log(localStorage.constructor.name)-->
+<!--</script>-->
+
+<!--<script>-->
+<!--localStorage.name = 'kukaro';-->
+<!--localStorage.age = 27;-->
+<!--delete localStorage.name;-->
+<!--localStorage.removeItem('age');-->
+<!--console.log(localStorage);-->
+<!--console.log(localStorage.name);-->
+<!--</script>-->
+
+<!--<script>-->
+<!--localStorage.name = 'kukaro';-->
+<!--localStorage.age = 27;-->
+<!--localStorage['1way'] = 'noway';-->
+<!--localStorage[1] = 'No.1';-->
+<!--localStorage.배고프다 = '나도';-->
+<!--for (let i = 0; i < localStorage.length; i++) {-->
+<!--console.log(localStorage.key(i));-->
+<!--}-->
+<!--console.log(localStorage);-->
+<!--</script>-->
