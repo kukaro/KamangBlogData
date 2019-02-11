@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <textarea id="myarea" cols="40" rows="40"></textarea><br>
+    <input type="text" id="mytext">&nbsp;<input type="button" value="제출" onclick="myclick()" id="mybtn">
+    <script>
+        function myclick() {
+            let chat = $('#mytext').val() + '\n';
+            console.log(chat);
+            $('#mytext').val('');
+            $('#myarea').val($('#myarea').val() + chat);
+            console.log($('#myarea').val());
+        }
+        function myfunc() {
+            console.log('hi');
+        };
+
+        let test = {
+            value: 10,
+            name: 'ktj',
+            func: myfunc,
+            func2: ()=>{console.log('hi')}
+        };
+
+        function f(obj){
+            let keys = Object.keys(obj);
+            for(let key of keys){
+                if(typeof obj[key] ==='function'){
+                    obj[key] = obj[key].toString();
+                }
+            }
+        }
+
+        f(test);
+        
+        let myObj = JSON.parse(JSON.stringify(test))
+        console.log(myObj)
+    </script>
+</body>
+
+</html>
