@@ -23,6 +23,7 @@
 //             .end();
 //     }
 // }
+//tests/mytest.js
 module.exports = {
     '버튼 누르면 채팅에 추가 됨': (browser)=>{
         browser
