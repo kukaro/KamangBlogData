@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="yellow"></div>
+    <div id="salmon"></div>
+    <div id="green"></div>
+    <div id="skyblue"></div>
+    <style>
+        body {
+            font-size: 0;
+        }
+
+        #skyblue {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        #salmon {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: width 1s ease 0.5s, margin-top 1s ease-out 0.5s;
+        }
+        #salmon:hover {
+            width: 200px;
+            margin-top: 100px;
+        }
+
+        #green {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        #yellow {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</body>
+
+</html>
+<!-- transition: <property> <duration> <timing-function> <delay>; -->
