@@ -1,0 +1,6 @@
+깃 트래킹 안하는 방법
+
+git rm --cached [filename]
+git update-index --assume-unchanged [path]
+
+https://hyeonseok.com/soojung/dev/2012/07/10/705.html
