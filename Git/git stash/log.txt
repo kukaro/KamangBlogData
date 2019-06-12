@@ -1,0 +1,4 @@
+https://gmlwjd9405.github.io/2018/05/18/git-stash.html
+위의 사이트에서 많은 부분을 참고 하였습니다.
+
+git stash show를 사용에 관하여 포스팅을 추가할 수도 있음.
