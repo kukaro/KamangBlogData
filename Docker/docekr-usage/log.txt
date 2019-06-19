@@ -1,0 +1,16 @@
+docker container 사용
+docker image ls -> 현재 이미지 리스트를 본다.
+##
+ps에 대한 문서
+https://docs.docker.com/engine/reference/commandline/ps/
+docker ps -> 현재 실행중인 컨테이너
+docker ps -a -> 모든 컨테이너
+docker ps -a -f "exited=0" => 종료된것만
+http://pyrasis.com/book/DockerForTheReallyImpatient/Chapter20/22
+<none> - 재 배포하면서 사라진 녀석들
+
+http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+docker rm $(docker ps -a -q)
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+
+docker ps했을 때 status에 대해서
