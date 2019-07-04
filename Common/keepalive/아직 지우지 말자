@@ -1,0 +1,17 @@
+update main.global_variables
+set variable_value='myadmin:myadmin'
+where variable_name = 'admin-admin_credentials';
+
+
+LOAD MYSQL VARIABLES TO RUNTIME;
+SAVE MYSQL VARIABLES TO DISK;
+LOAD ADMIN VARIABLES TO RUNTIME;
+SAVE ADMIN VARIABLES TO DISK;
+
+update main.global_variables
+set variable_value='proxymon'
+where variable_name ='mysql-monitor_username';
+
+update main.global_variables
+set variable_value='##password##'
+where variable_name ='mysql-monitor_password';
