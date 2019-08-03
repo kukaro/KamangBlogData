@@ -1,0 +1,5 @@
+https://www.rabbitmq.com/releases/rabbitmq-java-client/v1.7.0/rabbitmq-java-client-javadoc-1.7.0/com/rabbitmq/client/Channel.html
+
+https://rabbitmq.github.io/rabbitmq-java-client/api/current/
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_8.0.0/com.ibm.mq.dev.doc/q125040_.htm
