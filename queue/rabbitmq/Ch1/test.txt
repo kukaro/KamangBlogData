@@ -1,0 +1,1 @@
+https://pubs.vmware.com/vfabricRabbitMQ32/index.jsp?topic=/com.vmware.vfabric.rabbitmq.3.2/getstart/install-start-server-rhel.html
