@@ -18,7 +18,7 @@ class Sub extends Component {
 
 Sub.defaultProps = {
     arr: (function () {
-        let n = 10000;
+        let n = 100000;
         let ret = new Array(n).fill(0);
         ret = ret.map(() => {
             return {
