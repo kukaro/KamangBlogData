@@ -1,0 +1,4 @@
+작업을 메시지로 캡슐화하여 대기 => 큐의 사용 이유
+
+https://kimseunghyun76.tistory.com/424
+이거 참조
