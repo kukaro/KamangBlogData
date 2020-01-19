@@ -11,22 +11,34 @@ ctrl-x ctrl-s -> 저장
 ctrl-x ctrl-w -> 다른이름으로 저장
 
 #창 관련
-ctrl-x 1 -> 창을 삭제한다.
+ctrl-x 0 -> 현재 보고있는 창을 삭제
+ctrl-x 1 -> 현재 보고있는 창 빼고 전부 삭제
 ctrl-x 2 -> 창을 수직으로 분할.
 ctrl-x 3 -> 창을 수평으로 준할.
-ctrl-x 0 -> 창을 시계 방향으로 이동
+ctrl-x o -> 창을 이동한다.
 ctrl-x + -> 창의 크기를 통일
 
 #문서내 이동
 ctrl-n -> 한줄 아래 이동
 ctrl-p -> 한줄 위로 이동
 ctrl-a -> 제일 앞줄로 간다
+ctrl-e -> 제일 뒷줄로 간다
+alt-< -> 파일의 처음
+alt-> -> 파일의 마지막
+alt-g alt-g -> 원하는 줄로 이동
 
 #문서 편집
 ctrl-w -> 선택영역 잘라내기
 alt-w -> 선택영억 복사하기
 ctrl-y -> 붙혀넣기
 ctrl-k -> 한 줄 삭제
+ctrl-x u -> 실행 취소
+ctrl-d -> 커서의 위치 글자 삭제
+ctrl-space -> 커서부터 영역시작(근데 그냥 shift로 해도될듯)
 
 #참고
 https://m.blog.naver.com/PostView.nhn?blogId=lithium81&logNo=80123223813&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+#터미널 여는 방법
+https://unix.stackexchange.com/questions/44932/open-terminal-from-emacs
+M-x term
