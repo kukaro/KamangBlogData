@@ -37,12 +37,22 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-def confMap = ['imgConf':'img.freelec.co.kr', 'cmsConf':'cms.freelec.co.kr']
+defaultTasks 'exeTask1', 'exeTask2', 'exeTask3'
 
-confMap.each {svDomain, domainAddr->
-	task "exeTask${svDomain}"{
-		doLast{
-			println domainAddr
-		}
+task exeTask1{
+	doLast{
+		println 'This is exeTask1 Project'
+	}
+}
+
+task exeTask2{
+	doLast{
+		println 'This is exeTask2 Project'
+	}
+}
+
+task exeTask3{
+	doLast{
+		println 'This is exeTask3 Project'
 	}
 }
