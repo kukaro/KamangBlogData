@@ -37,12 +37,10 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-
-3.times{counter->
-	task "exeTask$counter"{
-		doLast{
-			println "task counter : $counter"
-		}
+task prevTask
+prevTask.description = ' <Task Execution >'
+prevTask{
+	doLast{
+		println description + 'This is Good!'
 	}
 }
-exeTask1.dependsOn exeTask0,exeTask2
